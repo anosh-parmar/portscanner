@@ -1,0 +1,96 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-open: var(--open);
+  --color-closed: var(--closed);
+  --color-filtered: var(--filtered);
+  --color-panel: var(--panel);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.19 0.032 258);
+  --foreground: oklch(0.96 0.005 250);
+  --panel: oklch(0.235 0.032 258);
+  --card: oklch(0.235 0.032 258);
+  --card-foreground: oklch(0.96 0.005 250);
+  --popover: oklch(0.235 0.032 258);
+  --popover-foreground: oklch(0.96 0.005 250);
+  --primary: oklch(0.62 0.19 255);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.29 0.032 258);
+  --secondary-foreground: oklch(0.96 0.005 250);
+  --muted: oklch(0.29 0.032 258);
+  --muted-foreground: oklch(0.7 0.025 255);
+  --accent: oklch(0.31 0.04 258);
+  --accent-foreground: oklch(0.97 0.005 250);
+  --destructive: oklch(0.62 0.21 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.33 0.032 258);
+  --input: oklch(0.33 0.032 258);
+  --ring: oklch(0.62 0.19 255);
+  --open: oklch(0.75 0.16 158);
+  --closed: oklch(0.66 0.2 22);
+  --filtered: oklch(0.82 0.16 85);
+  --sidebar: oklch(0.21 0.032 258);
+  --sidebar-foreground: oklch(0.9 0.01 250);
+  --sidebar-primary: oklch(0.62 0.19 255);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.29 0.032 258);
+  --sidebar-accent-foreground: oklch(0.97 0.005 250);
+  --sidebar-border: oklch(0.33 0.032 258);
+  --sidebar-ring: oklch(0.62 0.19 255);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family:
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      sans-serif;
+  }
+}
